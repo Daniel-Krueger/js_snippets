@@ -1,1 +1,1 @@
-javascript:(function(){var scr = document.createElement('script');scr.type = "text/javascript";scr.src = "https://cdn.jsdelivr.net/gh/Daniel-Krueger/js_snippets/video/html5_playcontrol.min.js";scr.async = true;document.getElementsByTagName('head')[0].appendChild(scr);})();
+javascript:(function(){var scr = document.createElement('script');scr.type = "text/javascript";scr.src = "https://cdn.jsdelivr.net/gh/Daniel-Krueger/js_snippets@0.3-beta/video/html5_playcontrol.min.js";scr.async = true;document.getElementsByTagName('head')[0].appendChild(scr);})();
