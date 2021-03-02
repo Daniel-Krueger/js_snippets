@@ -39,7 +39,8 @@ else{
         if (event.which == 88) {
             window.dkr.playing = !window.dkr.playing;
             window.dkr.videos[0].pause();
-            window.dkr.videos[0].currentTime -= 5;                    
+            window.dkr.videos[0].currentTime -= 5;  
+            window.dkr.videos[0].playbackRate = 1;                      
         }
         // w: stop and 5 seconds backwards
         if (event.which == 87) {
