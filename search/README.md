@@ -1,1 +1,1 @@
-A How To can be found [here](https://daniels-notes.de/posts/2021/quick-search-any-website)
+A How To can be found [here](https://daniels-notes.de/posts/2021/quickly-search-current-website)
