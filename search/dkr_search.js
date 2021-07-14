@@ -40,15 +40,12 @@ window.dkr.search.openSearchModal = function () {
         searchButtonLabel = "Suchen";
     }
 
-    let path = document.location.hostname + document.location.pathname
-        , currentPath = ''
-        , optionValues = ''
-        , maxDepth = 5
-        , counter = 0;
-    while (maxDepth > counter && path.indexOf('/', currentPath.length + 2) > -1) {
-        counter++
-        debugger;
-        currentPath = path.substring(0, path.indexOf('/', currentPath.length + 1) + 1);
+    let currentPath = document.location.origin
+        , optionValues = '';
+    optionValues += '<option value="' + currentPath + '">' + currentPath + '</option>';
+    var pathElements = document.location.pathname.split("/");
+    for (var i = 1; i < pathElements.length; i++) {
+        currentPath += "/" + pathElements[i];
         optionValues += '<option value="' + currentPath + '">' + currentPath + '</option>';
     }
     window.dkr.search.modalClose = window.dkr.search.createModal(`
