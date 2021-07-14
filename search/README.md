@@ -1,0 +1,1 @@
+A How To can be found [here](https://daniels-notes.de/posts/2021/html-5-video-play-control)
