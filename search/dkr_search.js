@@ -67,12 +67,20 @@ window.dkr.search.openSearchModal = function () {
         }
     });
 }
+
 window.dkr.search.startSearch = function () {
     // debugger;
-    var searchPhrase = $("#externalSearchPhrase")[0].value;
-    var searchLocation = $("#externalSearchLocation")[0].value;
+    var searchPhrase = document.getElementById("externalSearchPhrase").value;
+    var searchLocation = document.getElementById("externalSearchLocation").value;
     if (searchPhrase != null && searchPhrase != '') {
-        var scriptSrcText = $("script[src*='dkr_search.js']", $(document.head))[0].src
+        var scripts = document.head.getElementsByTagName("script");
+        var scriptSrcText = ""
+        for (var i = 0; i < scripts.length; i++) {
+            if (scripts[i].src.indexOf("dkr_search.js") > -1) {
+                scriptSrcText = scripts[i].src;
+                break;
+            }
+        }
         var scriptSrc = new URL(scriptSrcText);
         var engine = scriptSrc.searchParams.get("engine");
         var targetEngine = window.dkr.search.searchEngines[engine];
