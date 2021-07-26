@@ -100,7 +100,7 @@ window.dkr.search.createModal = (modalContent) => {
     // Definitions
     let modal = document.createElement("div"),
         modalStyle = document.createElement("style"),
-        modalCSS = '.js-modal { position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: white;border-radius: 10px;border-color: black;border-width: 5px;border-style: inset;} .js-modal img, .js-modal iframe, .js-modal video{ max-width: 100%; } .js-modal-inner{ position: relative; padding: 10px; } .js-modal-close{ position: absolute; top: -10px; right: -10px; background-color: black; color: #eee; border-width: 0; font-size: 10px; height: 24px; width: 24px; border-radius: 100%; text-align: center; }',
+        modalCSS = '.js-modal { z-index:999;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: white;border-radius: 10px;border-color: black;border-width: 5px;border-style: inset;} .js-modal img, .js-modal iframe, .js-modal video{ max-width: 100%; } .js-modal-inner{ position: relative; padding: 10px; } .js-modal-close{ position: absolute; top: -10px; right: -10px; background-color: black; color: #eee; border-width: 0; font-size: 10px; height: 24px; width: 24px; border-radius: 100%; text-align: center; }',
         modalClose = '<button class="js-modal-close" id="js_modal_close">X</button>',
         theBody = document.getElementsByTagName('body')[0],
         theHead = document.getElementsByTagName('head')[0];
